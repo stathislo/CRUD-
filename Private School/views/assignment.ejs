@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <body class="text-center">
+
+      <div class="cover-container d-flex h-100 p-3 mx-auto flex-column">
+        <header class="masthead mb-auto">
+          <div class="inner">
+            <h3 class="masthead-brand" id="moto">LEARN ON THE FLY</h3>
+            <nav class="nav nav-masthead justify-content-center">
+              <a class="nav-link active" href="/">Home</a>
+              <a class="nav-link light" href="/student">Students</a>
+              <a class="nav-link" href="/trainer">Trainers</a>
+              <a class="nav-link" href="/course">Courses</a>
+              <a class="nav-link" href="/assignment">Assignments</a>
+            </nav>
+          </div>
+        </header>
+          <div>
+            <main >
+            <table class="table table-striped  table-light">
+              <thead>
+                <tr class="table-active table-dark">
+                  <th colspan="6" id="table-name">Assignments</th>
+                </tr>
+                <tr class="table-active table-dark" id="table-name">
+                  <th scope="col">Title</th>
+                  <th scope="col">Description</th>
+                  <th scope="col">Sub Date</th>
+                  <th scope="col">Oral Mark</th>
+                  <th scope="col">Total Mark</th>
+                </tr>
+              </thead>
+              <tbody>
+                <% for(var i = 0; i < assignment.length; i++) { %>
+                <tr>
+                  <td><%= assignment[i].title %></td>
+                  <td><%= assignment[i].description %></td>
+                  <td><%= assignment[i].sub_date_time.toDateString() %></td>
+                  <td><%= assignment[i].oral_mark %></td>
+                  <td><%= assignment[i].total_mark %></td>
+                </tr>
+                <% } %>
+              </tbody>
+            </table>
+          </main>
+              </div>
+              <footer class="footer fixed-bottom">     
+                <p class="footer-links">
+                  <a href="/">Home</a>
+                  ·
+                  <a href="/student">Students</a>
+                  ·
+                  <a href="/trainer">Trainers</a>
+                  ·
+                  <a href="/course">Courses</a>
+                  ·
+                  <a href="/assignment">Assignments</a>
+                  ·
+                </p>
+                <p class="footer-company-name">Learn on the fly &copy; 2021</p>
+          
+              </footer>
+       </body>
+      </html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel='stylesheet' href='/stylesheets/style.css'/>
+  </head>
+  <body>
+        <body class="text-center">
+    
+          <div class="cover-container d-flex h-100 p-3 mx-auto flex-column">
+            <header class="masthead mb-auto">
+              <div class="inner">
+                <h3 class="masthead-brand">LEARN ON THE FLY</h3>
+                <nav class="nav nav-masthead justify-content-center">
+                  <a class="nav-link active" href="/">Home</a>
+                  <a class="nav-link light" href="/student">Students</a>
+                  <a class="nav-link" href="/trainer/list">Trainers</a>
+                  <a class="nav-link" href="/course">Courses</a>
+                  <a class="nav-link" href="/assignments">Assignments</a>
+                </nav>
+              </div>
+            </header>
+    <main role="main" class="inner cover">
+        <div class="row justify-content-center">
+    <form role="form" action="" method="POST">
+        <div class="form-group">
+          <label for="lastname">Last Name:</label>
+          <input type="text" name="lastname" class="form-control" id="lastname">
+        </div>
+        <div class="form-group">
+          <label for="firstname">First Name:</label>
+          <input type="text" name="firstname" class="form-control" id="firstname">
+        </div>
+        <div class="form-group">
+            <label for="subject">Subject:</label>
+            <input type="text" name="subject" class="form-control" id="subject">
+        </div>
+        <button type="submit" class="btn btn-default add-button">Add Trainer</button>
+      </form>
+    </div>
+    </main>
+    <div id="message"><%= message %></div>
+    <footer class="footer fixed-bottom">
+
+        <p class="footer-company-motto">Private School of fly</p>
+  
+        <p class="footer-links">
+          <a href="#">Home</a>
+          ·
+          <a href="#">Students</a>
+          ·
+          <a href="#">Trainers</a>
+          ·
+          <a href="#">Courses</a>
+          ·
+          <a href="#">Assignments</a>
+          ·
+        </p>
+  
+        <p class="footer-company-name">Learn on the fly &copy; 2021</p>
+  
+      </footer>
+    
+  </body>
+</html>
